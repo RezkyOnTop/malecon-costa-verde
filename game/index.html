@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MALECON — Costa Verde</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="src/hud.css">
+</head>
+<body>
+<div id="stage">
+  <canvas id="view"></canvas>
+
+  <div id="hud" class="hidden">
+    <div id="mission-card">
+      <div id="mission-head"><span id="mission-job">JOB 1/9</span><span id="mission-timer">2:40</span></div>
+      <div id="mission-title">A favour for Marisol</div>
+      <div id="mission-objective">Drive to the pier before the boat sails</div>
+      <div id="mission-stage"><i class="seg on"></i><i class="seg"></i><i class="seg"></i><i class="seg"></i><i class="seg"></i></div>
+      <div id="mission-next">NEXT · Reach the pier</div>
+    </div>
+
+    <div id="wanted-rack">
+      <div id="wanted-word">WANTED</div>
+      <div id="wanted-stars"></div>
+      <div id="wanted-note">IN SIGHT · search follows</div>
+    </div>
+
+    <div id="cop-radio">
+      <div id="cop-head">CVPD RESPONSE · <span id="cop-units">0</span> UNITS</div>
+      <div id="cop-list"></div>
+    </div>
+
+    <div id="purse">
+      <div id="cash">$0</div>
+      <div id="clock">18:40</div>
+      <div id="respect">0 RESPECT</div>
+    </div>
+
+    <div id="weapons">
+      <div class="slot"><b>1</b>FISTS</div>
+      <div class="slot grab"><b>2</b>GRAB<span>car</span></div>
+      <div class="slot"><b>3</b>PISTOL<span id="ammo">72</span></div>
+      <div class="slot"><b>4</b>SMG</div>
+      <div class="slot locked"><b>5</b>RPG · LOCKED</div>
+    </div>
+
+    <div id="map-wrap">
+      <canvas id="minimap" width="210" height="210"></canvas>
+      <div id="compass">N</div>
+      <div id="street-name">MALECÓN CELESTE</div>
+    </div>
+
+    <div id="ride">
+      <div id="ride-name">ON FOOT</div>
+      <div id="ride-bar"><i></i></div>
+      <div id="speed"><b id="speed-num">0</b><span>km/h</span></div>
+      <div id="gear">P</div>
+    </div>
+
+    <div id="subtitle" class="hidden"><b id="sub-who">MARISOL</b><span id="sub-what"></span></div>
+    <div id="toast" class="hidden"></div>
+  </div>
+
+  <div id="title-screen">
+    <div id="title-word">MALECÓN</div>
+    <div id="title-sub">Costa Verde · a city that pays for its own sun</div>
+    <div id="title-menu">
+      <div class="item on" data-act="play">START A NEW WEEK</div>
+      <div class="item" data-act="continue">CONTINUE · DAY <span id="save-day">1</span></div>
+      <div class="item" data-act="controls">CONTROLS</div>
+    </div>
+    <div id="title-hint">W A S D · drive · E grab a car · SHIFT sprint · mouse look · F1 save</div>
+    <div id="title-foot">Nine jobs · one island · nobody leaves clean</div>
+  </div>
+
+  <div id="pause-screen" class="hidden">
+    <div id="pause-word">PAUSED</div>
+    <div id="pause-list">
+      <div class="item on" data-act="resume">RESUME</div>
+      <div class="item" data-act="save">SAVE GAME</div>
+      <div class="item" data-act="quit">QUIT TO TITLE</div>
+    </div>
+  </div>
+
+  <div id="big-map" class="hidden"><canvas id="mapcanvas" width="720" height="720"></canvas><div id="bigmap-key"><b>M</b> to close</div></div>
+</div>
+
+<script src="vendor/three.min.js"></script>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
